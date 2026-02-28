@@ -1,0 +1,78 @@
+export const technologies = {
+  frontEnd: [
+    { name: "HTML", image: "/assets/technologies-icons/HTML.svg?v=3" },
+    { name: "CSS", image: "/assets/technologies-icons/CSS.svg?v=3" },
+    { name: "React", image: "/assets/technologies-icons/React.svg?v=3" },
+    { name: "Next.js", image: "/assets/technologies-icons/next-js.svg?v=3" },
+    { name: "TailwindCSS", image: "/assets/technologies-icons/tailwindcss.svg?v=3" },
+    { name: "Shadcn UI", image: "/assets/technologies-icons/shadcnui.svg?v=3" },
+    { name: "Redux", image: "/assets/technologies-icons/Redux.svg?v=3" },
+    { name: "Zustand", image: "/assets/technologies-icons/Zustand.svg?v=3" },
+  ],
+  languages: [
+    { name: "JavaScript", image: "/assets/technologies-icons/JS.svg?v=3" },
+    { name: "TypeScript", image: "/assets/technologies-icons/TS.svg?v=3" },
+    { name: "Python", image: "/assets/technologies-icons/python.svg?v=3" },
+  ],
+  backEnd: [
+    { name: "Node.js", image: "/assets/technologies-icons/nodejs.svg?v=3" },
+    { name: "Express.js", image: "/assets/technologies-icons/expressjs.svg?v=3" },
+    { name: "Fastify", image: "/assets/technologies-icons/fastify.svg?v=3" },
+    { name: "PostgreSQL", image: "/assets/technologies-icons/postgresql.svg?v=3" },
+    { name: "Prisma", image: "/assets/technologies-icons/prisma.svg?v=3" },
+    { name: "Docker", image: "/assets/technologies-icons/docker.svg?v=3" },
+    { name: "Vitest", image: "/assets/technologies-icons/vitest.svg?v=3" },
+    { name: "Jest", image: "/assets/technologies-icons/jest.svg?v=3" },
+  ],
+};
+
+export const projects = [
+  {
+    name: "Cloudy",
+    image: "/assets/projects-images/cloudy.png",
+    theme: "Rede social",
+    technologies: ["Node.js", "Typescript", "Express.js", "PrismaORM", "PostgreSQL", "React", "Zustand"],
+    deploy: "https://cloudy-front-end.vercel.app/",
+    github: "https://github.com/KaykyDion/Cloudy-api",
+  },
+  {
+    name: "DevFlix",
+    image: "/assets/projects-images/devflix.png",
+    theme: "Catálogo de filmes",
+    technologies: ["React", "Styled-components", "API"],
+    deploy: "https://dev-flix-kappa.vercel.app/",
+    github: "https://github.com/KaykyDion/DevFlix",
+  },
+  {
+    name: "efood",
+    image: "/assets/projects-images/efood.png",
+    theme: "Plataforma de delivery",
+    technologies: ["React", "Styled-components", "Redux", "Typescript"],
+    deploy: "https://efood-alpha-seven.vercel.app/",
+    github: "https://github.com/KaykyDion/efood",
+  },
+  {
+    name: "Gestor de estoques",
+    image: "/assets/projects-images/gestor-de-estoques.png",
+    theme: "Gerenciador de estoques",
+    technologies: ["React", "Styled-components"],
+    deploy: "https://gestor-de-estoques-react.vercel.app/",
+    github: "https://github.com/KaykyDion/gestor-de-estoques-react",
+  },
+  {
+    name: "Burguer Boss",
+    image: "/assets/projects-images/burguer-boss.png",
+    theme: "Cardápio Online",
+    technologies: ["React", "CSS", "Zustand"],
+    deploy: "https://burger-boss-six.vercel.app/",
+    github: "https://github.com/KaykyDion/Burger-Boss",
+  },
+  {
+    name: "eplay",
+    image: "/assets/projects-images/eplay.png",
+    theme: "e-commerce de games",
+    technologies: ["React", "Styled-components", "Redux", "Typescript", "API"],
+    deploy: "https://eplay-one.vercel.app/",
+    github: "https://github.com/KaykyDion/eplay",
+  },
+];

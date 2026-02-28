@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode - Soft slate/purple-gray background for less eye-strain than pure white */
+  --background: #f8fafc;
+  /* Slate 50 */
+  --foreground: #0f172a;
+  /* Slate 900 */
+
+  /* Vibrant Purple for primary CTAs and interactive elements */
+  --primary: #8b5cf6;
+  /* Violet 500 */
+  --accent: #a855f7;
+  /* Purple 500 */
+
+  /* Glassmorphism optimized for light mode (subtle white frosted glass) */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(139, 92, 246, 0.15);
+  /* Tinted border */
+}
+
+.dark {
+  /* Dark Mode - Deep midnight purple/slate for a premium feel */
+  --background: #0b0914;
+  --foreground: #f8fafc;
+  /* Slate 50 */
+
+  /* Lighter vibrant purples for dark backgrounds to pop */
+  --primary: #a78bfa;
+  /* Violet 400 */
+  --accent: #c084fc;
+  /* Purple 400 */
+
+  /* Glassmorphism optimized for dark mode (subtle dark slate/purple frosted glass) */
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-outfit);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.12), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.12), transparent 25%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism utility */
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
