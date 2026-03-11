@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send, Phone } from "lucide-react";
 import { env } from "@/lib/env";
 
 export default function Contact() {
@@ -55,8 +55,21 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-bold mb-1">LinkedIn</h3>
                 <p className="text-zinc-400 text-sm mb-3">Conecte-se comigo pelo LinkedIn para acompanharmos nossos progressos.</p>
-                <a href="https://linkedin.com/in/kayky-dion" target="_blank" rel="noreferrer" className="text-accent hover:text-accent/80 font-medium transition-colors">
+                <a href="https://linkedin.com/in/kaykydion" target="_blank" rel="noreferrer" className="text-accent hover:text-accent/80 font-medium transition-colors">
                   Acessar Perfil
+                </a>
+              </div>
+            </div>
+
+            <div className="glass p-8 rounded-3xl flex items-start gap-4 hover:border-primary/30 transition-colors">
+              <div className="p-4 bg-primary/10 rounded-2xl text-primary">
+                <Phone size={24} />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">Telefone / WhatsApp</h3>
+                <p className="text-zinc-400 text-sm mb-3">Me chame no WhatsApp ou me ligue para uma conversa rápida.</p>
+                <a href="https://wa.me/5531999088984" target="_blank" rel="noreferrer" className="text-primary hover:text-primary/80 font-medium transition-colors">
+                  (31) 9 9908-8984
                 </a>
               </div>
             </div>
@@ -81,7 +94,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="message" className="text-sm font-medium text-foreground/70 ml-1">Mensagem</label>
-              <textarea id="message" rows={4} placeholder="Como posso ajudar?" className="bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm resize-none text-foreground placeholder-foreground/40" />
+              <textarea id="message" rows={8} placeholder="Como posso ajudar?" className="bg-foreground/5 border border-foreground/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm resize-none text-foreground placeholder-foreground/40" />
             </div>
             <button type="button" className="mt-2 bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
               Enviar Mensagem <Send size={18} />

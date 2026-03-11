@@ -50,18 +50,21 @@ export default function Experience() {
           </motion.p>
         </div>
 
-        <div className="relative border-l border-foreground/10 ml-4 md:ml-0 md:pl-0 md:w-full">
+        <div className="relative ml-4 md:ml-0 md:w-full">
+          {/* Center line - mobile: left, desktop: center */}
+          <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-foreground/10" />
+
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="mb-12 relative pl-8 md:pl-0 md:flex items-center group w-full"
             >
               {/* Timeline dot */}
-              <div className="absolute left-[-5px] md:left-1/2 md:-ml-[5px] top-1 w-[11px] h-[11px] rounded-full bg-primary ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all z-10" />
+              <div className="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 top-1 w-[11px] h-[11px] rounded-full bg-primary ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all z-10" />
 
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right md:ml-0' : 'md:pl-12 md:ml-auto'}`}>
                 <div className="glass p-6 bg-foreground/5 rounded-2xl hover:bg-foreground/10 transition-colors border border-foreground/5">
