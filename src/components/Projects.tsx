@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/lib/data";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Lock } from "lucide-react";
 
 type ProjectType = typeof projects[0];
 
@@ -71,14 +71,22 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
           >
             <ExternalLink size={16} /> Deploy
           </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-foreground/5 hover:bg-foreground/10 text-foreground transition-colors text-sm font-medium"
-          >
-            <Github size={16} /> GitHub
-          </a>
+          {project.github ? (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-foreground/5 hover:bg-foreground/10 text-foreground transition-colors text-sm font-medium"
+            >
+              <Github size={16} /> GitHub
+            </a>
+          ) : (
+            <div
+              className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-foreground/5 hover:bg-foreground/10 text-foreground transition-colors text-sm font-medium"
+            >
+              <Lock size={16} /> Privado
+            </div>
+          )}
         </div>
       </div>
     </motion.div>

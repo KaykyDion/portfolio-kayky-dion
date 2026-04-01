@@ -28,6 +28,14 @@ export const technologies = {
 
 export const projects = [
   {
+    name: "Linelist",
+    image: "/assets/projects-images/linelist.png",
+    theme: "Kanban Colaborativo",
+    technologies: ["Next.js", "Typescript", "Docker Compose", "PostgreSQL", "PrismaORM", "React", "TailwindCSS", "Shadcn UI"],
+    deploy: "https://linelist.vercel.app/",
+    github: "",
+  },
+  {
     name: "Cloudy",
     image: "/assets/projects-images/cloudy.png",
     theme: "Rede social",
@@ -58,14 +66,6 @@ export const projects = [
     technologies: ["React", "Styled-components"],
     deploy: "https://gestor-de-estoques-react.vercel.app/",
     github: "https://github.com/KaykyDion/gestor-de-estoques-react",
-  },
-  {
-    name: "Burguer Boss",
-    image: "/assets/projects-images/burguer-boss.png",
-    theme: "Cardápio Online",
-    technologies: ["React", "CSS", "Zustand"],
-    deploy: "https://burger-boss-six.vercel.app/",
-    github: "https://github.com/KaykyDion/Burger-Boss",
   },
   {
     name: "eplay",
